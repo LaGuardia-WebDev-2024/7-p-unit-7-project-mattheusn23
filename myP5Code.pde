@@ -5,14 +5,26 @@ void setup() {
 
 //🎯Variable Declarations Go Here
 
+var ball = 40;
+var rightX = 100;
+var leftX = 150;
 
 //🟢Draw Procedure - Runs on Repeat
 draw = function(){
  
   background(255,255,255,0);
-  
 
 
+ // ball
+ fill(50, 137, 168);
+  ellipse(rightX-62, 300, ball, ball);
+
+  // ball
+ fill(50, 137, 168);
+  ellipse(leftX-62, 300, ball, ball);
+
+  rightX +=3;
+  leftX  -=3;
 
 
 
