@@ -8,6 +8,7 @@ void setup() {
 var ball = 40;
 var rightX = 100;
 var leftX = 150;
+var rectsize = 30;
 
 //🟢Draw Procedure - Runs on Repeat
 draw = function(){
@@ -15,16 +16,26 @@ draw = function(){
   background(255,255,255,0);
 
 
- // ball
+ // right ball
  fill(50, 137, 168);
   ellipse(rightX-62, 300, ball, ball);
+  
 
-  // ball
+  // left ball
  fill(50, 137, 168);
-  ellipse(leftX-62, 300, ball, ball);
+  ellipse(leftX+400, 300, ball, ball);
+
+  //random stuffy
+  rect(20,20,rectsize,rectsize);
+  fill(50, 137, 168);
+  noStroke(0);
+  arc(300,300,250,50, radians(0),radians(360));
+  
 
   rightX +=3;
   leftX  -=3;
+
+  rectsize = random(10,90);
 
 
 
